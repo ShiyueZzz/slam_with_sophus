@@ -12,8 +12,8 @@ using TrajectoryType = vector<Sophus::SE3d, Eigen::aligned_allocator<Sophus::SE3
 TrajectoryType ReadTrajectory(const string &path);
 
 int main(int argc, char **argv) {
-    auto gt_file = "trajectory_gt.txt";
-    auto output_file = "trajectory_output.txt";
+    auto gt_file = "/home/shiyue/work/slam_with_sophus/data/trajectory_gt.txt";
+    auto output_file = "/home/shiyue/work/slam_with_sophus/data/trajectory_output.txt";
     TrajectoryType gt = ReadTrajectory(gt_file);
     TrajectoryType output = ReadTrajectory(output_file);
     assert(!gt.empty() && !output.empty());
